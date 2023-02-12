@@ -19,3 +19,10 @@ Development is done via `docker-compose.yml` file. Make sure you have `docker` i
 ```
 docker-compose up --build
 ```
+
+#Database
+Run on app container following command:
+```
+
+alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 80 --reload
+```
