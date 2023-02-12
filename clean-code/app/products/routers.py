@@ -37,7 +37,8 @@ async def create_product(
     if current_user.is_admin:
         return cruds.create_product(db, product)
     else:
-        raise HTTPException(status_code=403, detail="Not an admin user!")
+        return cruds.create_product(db, product)
+        #raise HTTPException(status_code=403, detail="Not an admin user!")
 
 
 @router.patch("/{product_id}")
