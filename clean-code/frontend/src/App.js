@@ -11,6 +11,7 @@ import Register from "./components/register.component";
 import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import Product from "./components/product.component";
+import Add from "./components/add.component";
 
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
@@ -65,6 +66,11 @@ class App extends Component {
                 Home
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to={"/add"} className="nav-link">
+                Add product
+              </Link>
+            </li>
           </div>
 
           {currentUser ? (
@@ -104,6 +110,7 @@ class App extends Component {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/add" element={<Add />} />
             <Route path="/product/:id" element={<Product />} />
           </Routes>
         </div>
