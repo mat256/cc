@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import ProductService from "../services/product.service";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 
 
-const required = value => {
-  if (!value) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        This field is required!
-      </div>
-    );
-  }
-};
+//const required = value => {
+//  if (!value) {
+//    return (
+//      <div className="alert alert-danger" role="alert">
+//        This field is required!
+//      </div>
+//    );
+//  }
+//};
 
 
 export default class Add extends Component {
