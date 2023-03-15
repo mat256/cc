@@ -20,7 +20,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 2
-#    command: /bin/sh -c "./startupFinalisation.sh"
+    command: /bin/sh -c "./startupFinalisation.sh"
   frontend:
     build:
       context: frontend
