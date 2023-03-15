@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/clean-code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/.github" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/app" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/app/alembic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/app/alembic/versions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/app/auth" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/app/order" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/app/products" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/frontend" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/frontend/public" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/frontend/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/frontend/src/common" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/frontend/src/components" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/clean-code/frontend/src/services" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.10 (cc)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
+    <option name="myDocStringFormat" value="Plain" />
+  </component>
+</module>
