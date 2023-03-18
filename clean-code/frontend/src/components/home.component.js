@@ -1,21 +1,10 @@
 import React, { Component } from "react";
 import ProductService from "../services/product.service";
-import { Link } from "react-router-dom";
-import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button";
 
 
 
-const required = value => {
-  if (!value) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        This field is required!
-      </div>
-    );
-  }
-};
+
+
 
 
 export default class Home extends Component {
@@ -46,9 +35,11 @@ export default class Home extends Component {
   render() {
     return (
       <div className="container">
-        {this.state.products.map(function (d, idx) {
-          return (<ul key={d.id}><Link to={'/product/' + d.id}>Title: {d.title}, price: {d.price}</Link></ul>)
-        })}
+        <h2>How to:</h2>
+        <p>Create new order on orders page</p>
+        <p>Set order as active</p>
+        <p>Choose product from products page</p>
+        <p>Add product to order</p>
       </div >
 
 

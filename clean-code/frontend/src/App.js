@@ -13,6 +13,7 @@ import Profile from "./components/profile.component";
 import Product from "./components/product.component";
 import Products from "./components/products.component";
 import Orders from "./components/orders.component";
+import Order from "./components/order.component";
 import Add from "./components/add.component";
 
 // import AuthVerify from "./common/auth-verify";
@@ -124,6 +125,7 @@ class App extends Component {
             <Route path="/profile" element={<Profile />} />
             <Route path="/products" element={<Products />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<Order />} />
             <Route path="/add" element={<Add />} />
             <Route path="/product/:id" element={<Product />} />
           </Routes>

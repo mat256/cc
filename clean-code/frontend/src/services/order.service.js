@@ -9,7 +9,7 @@ class OrderService {
     }
 
     getOrder(orderId) {
-        return axios.get(API_URL + toString(orderId), { headers: authHeader() })
+        return axios.get(API_URL + orderId, { headers: authHeader() })
     }
 
     listOrders() {
@@ -17,11 +17,11 @@ class OrderService {
     }
 
     deleteOrder(orderId) {
-        return axios.delete(API_URL + toString(orderId), { headers: authHeader() })
+        return axios.delete(API_URL + orderId, { headers: authHeader() })
     }
 
     getOrderItems(orderId) {
-        return axios.get(API_URL + toString(orderId) + "/products", { headers: authHeader() })
+        return axios.get(API_URL + orderId + "/products", { headers: authHeader() })
     }
 
     addProductToOrder(orderId, productId, amount) {
