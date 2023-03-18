@@ -1,16 +1,13 @@
 version: "3.9"
 services:
-
-
   app:
-    #command: bash -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 80 --reload"
     build:
       context: app
       dockerfile: Dockerfile
     volumes:
       - ./app:/app
     ports:
-      - 80:80
+      - "80:80"
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
@@ -18,16 +15,26 @@ services:
       POSTGRES_DB_NAME: app_db
       POSTGRES_PORT: 5432
       JWT_SECRET: secret
-    depends_on:
-      - db
+    healthcheck:
+      test: ["CMD-SHELL", " netstat -an | grep 0.0.0.0:80" ]
+      interval: 10s
+      timeout: 5s
+      retries: 2
+    command: /bin/sh -c "./startupFinalisation.sh"
   frontend:
     build:
       context: frontend
       dockerfile: Dockerfile
     volumes:
       - ./frontend:/app
+    stdin_open: true
     ports:
-      - 8081:8081
+      - "8081:8081"
+    depends_on:
+      app:
+        condition: service_healthy
+      db:
+        condition: service_started
   db:
     image: postgres:14
     volumes:
@@ -38,7 +45,7 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_DB: app_db
     ports:
-      - 5432:5432
+      - "5432:5432"
 volumes:
   pgdata:
     driver: local
