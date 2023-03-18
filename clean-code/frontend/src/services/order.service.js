@@ -5,7 +5,7 @@ const API_URL = 'http://127.0.0.1:80/orders/';
 
 class OrderService {
     createNewOrder() {
-        return axios.post(API_URL, { headers: authHeader() });
+        return axios.post(API_URL,null, { headers: authHeader() });
     }
 
     getOrder(orderId) {

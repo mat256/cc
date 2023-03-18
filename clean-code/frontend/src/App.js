@@ -11,6 +11,8 @@ import Register from "./components/register.component";
 import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import Product from "./components/product.component";
+import Products from "./components/products.component";
+import Orders from "./components/orders.component";
 import Add from "./components/add.component";
 
 // import AuthVerify from "./common/auth-verify";
@@ -67,6 +69,16 @@ class App extends Component {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to={"/products"} className="nav-link">
+                Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/orders"} className="nav-link">
+                Orders
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to={"/add"} className="nav-link">
                 Add product
               </Link>
@@ -110,6 +122,8 @@ class App extends Component {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/add" element={<Add />} />
             <Route path="/product/:id" element={<Product />} />
           </Routes>
